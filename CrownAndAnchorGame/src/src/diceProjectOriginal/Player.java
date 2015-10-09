@@ -1,3 +1,4 @@
+package diceProjectOriginal;
 
 public class Player {
 	private String name;

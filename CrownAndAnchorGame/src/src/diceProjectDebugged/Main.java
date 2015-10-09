@@ -1,3 +1,4 @@
+package diceProjectDebugged;
 import java.util.List;
 import java.io.*;
 
@@ -37,7 +38,7 @@ public class Main {
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-                while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
+                while (player.balanceExceedsLimitBy() && player.getBalance() < 200)
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();

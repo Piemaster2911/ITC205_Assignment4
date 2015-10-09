@@ -1,3 +1,4 @@
+package diceProjectDebugged;
 public class Dice {
 			
 	private DiceValue value;
