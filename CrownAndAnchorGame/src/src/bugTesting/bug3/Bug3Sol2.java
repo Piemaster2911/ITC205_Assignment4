@@ -12,7 +12,7 @@ import diceProjectOriginal.Dice;
 import diceProjectOriginal.DiceValue;
 import diceProjectOriginal.Game;
 
-public class Bug3Test1 {
+public class Bug3Sol2 {
     Dice d1;
     Dice d2;
     Dice d3;
@@ -34,6 +34,12 @@ public class Bug3Test1 {
         System.out.println("\nTest Starting...");
         
         for(int i = 0; i < 10; i++) {
+            d1 = new Dice();
+            d2 = new Dice();
+            d3 = new Dice();
+            
+            game = new Game(d1, d2, d3);
+            
             cdv = game.getDiceValues();
             
             System.out.printf("Rolled %s, %s, %s\n",

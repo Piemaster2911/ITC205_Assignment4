@@ -42,6 +42,12 @@ public class Main {
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
+                	
+                	d1 = new Dice();
+                	d2 = new Dice();
+                	d3 = new Dice();
+                	
+                	game = new Game(d1, d2, d3);
                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
@@ -73,6 +79,8 @@ public class Main {
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;
             totalLosses += loseCount;
+            
+            System.out.println("Please type \"q\" without quotes and press enter to proceed!");
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
