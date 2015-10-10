@@ -80,8 +80,6 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
             
-            System.out.println("Please type \"q\" without quotes and press enter to proceed!");
-
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
