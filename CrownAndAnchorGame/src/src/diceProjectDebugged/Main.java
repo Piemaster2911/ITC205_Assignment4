@@ -12,7 +12,7 @@ public class Main {
         Dice d2 = new Dice();
         Dice d3 = new Dice();
 
-        Player player = new Player("Fred", 100);
+        Player player;
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -26,10 +26,10 @@ public class Main {
             
             for (int i = 0; i < 100; i++)
             {
-            	String name = "Fred";
-            	int balance = 100;
-            	int limit = 0;
+                String name = "Fred";
+                int balance = 100;
                 player = new Player(name, balance);
+                int limit = 0;
                 player.setLimit(limit);
                 int bet = 5;
 
@@ -38,7 +38,7 @@ public class Main {
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-                while (player.balanceExceedsLimitBy() && player.getBalance() < 200)
+                while (player.balanceExceedsLimit() && player.getBalance() < 200)
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
@@ -58,7 +58,7 @@ public class Main {
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
-                    if (winnings > 0) {
+                    if (winnings >= 0) {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 

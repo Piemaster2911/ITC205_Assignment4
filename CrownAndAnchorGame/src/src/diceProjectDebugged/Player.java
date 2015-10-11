@@ -27,13 +27,9 @@ public class Player {
 		return (balance > limit);
 	}
 	
-	public boolean balanceExceedsLimitBy() {
-		return (balance > limit);
-	}
-	
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
-		if (!balanceExceedsLimitBy()) throw new IllegalArgumentException("Placing bet would go below limit.");
+		if (!balanceExceedsLimit()) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
 	
