@@ -48,6 +48,7 @@ public class Bug7Test1 {
         }
         if(isValid)
             System.out.println("Program successfully shut down!");
+        assertTrue(isValid);
     }
 
 }

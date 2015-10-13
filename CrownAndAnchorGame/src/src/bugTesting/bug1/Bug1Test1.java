@@ -1,5 +1,7 @@
 package bugTesting.bug1;
 
+import static org.junit.Assert.*;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +50,6 @@ public class Bug1Test1 {
     
             
             System.out.println("Player preparing to place bet! Balance: " + player.getBalance());
-            
             player.takeBet(bet);
             
             System.out.println("Player places bet! Balance: " + player.getBalance());
@@ -68,6 +69,8 @@ public class Bug1Test1 {
     
             if (matches > 0) {          
                 player.receiveWinnings(winnings);
+
+                
             }
             
             System.out.println("Winnings: " + winnings + ", balance: " + player.getBalance());

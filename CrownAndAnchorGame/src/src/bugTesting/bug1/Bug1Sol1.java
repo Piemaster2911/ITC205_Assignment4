@@ -1,5 +1,7 @@
 package bugTesting.bug1;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +70,7 @@ public class Bug1Sol1 {
     
             if (matches > 0) {          
                 player.receiveWinnings(winnings);
+                
             }
             
             // the solution line

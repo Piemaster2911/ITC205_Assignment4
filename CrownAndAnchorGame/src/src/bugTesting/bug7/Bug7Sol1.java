@@ -40,6 +40,8 @@ public class Bug7Sol1 {
                 
         if(isValid)
             System.out.println("Program successfully shut down!");
+        
+        assertTrue(isValid);
     }
 
 }

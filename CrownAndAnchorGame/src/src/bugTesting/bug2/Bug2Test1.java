@@ -40,12 +40,20 @@ public class Bug2Test1 {
         System.out.println("Balance: " + balance);
         
         System.out.println("Now checking boolean state if balance is above limit");
+        
+        boolean isValid = false;
+        
         if(balance > limit)
             System.out.println("Balance is above limit");
-        else
+            
+        else {
             System.out.println("Balance is not above limit");
+            isValid = true;
+        }
         
         System.out.println("Test ended...\n");
+        
+        assertTrue(isValid);
         
     }
     
@@ -68,12 +76,20 @@ public class Bug2Test1 {
         System.out.println("Balance: " + balance);
         
         System.out.println("Now checking boolean state if balance is above limit");
-        if(balance > limit)
+        
+        boolean isValid = false;
+        
+        if(balance > limit) {
             System.out.println("Balance is above limit");
+            isValid = true;
+        }
         else
             System.out.println("Balance is not above limit");
+
         
         System.out.println("Test ended...\n");
+        
+        assertTrue(isValid);
         
     }
 
