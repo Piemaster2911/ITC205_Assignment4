@@ -6,8 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		
-	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
-
+	   
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
@@ -80,8 +79,7 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
             
-            String ans = console.readLine();
-            if (ans.equals("q")) break;
+            break;
         } //while true
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
